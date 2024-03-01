@@ -1,4 +1,11 @@
+"use client"
+import Link from 'next/link'
+import React from 'react';
 function Featured() {
+    function handleClick() {
+        const router = useRouter();
+        router.refresh();
+    }
     return (
         <>
         <section id="featured-products" class="product-store padding-large">
@@ -6,7 +13,7 @@ function Featured() {
                 <div class="section-header d-flex flex-wrap align-items-center justify-content-between">
                     <h2 class="section-title">Featured Products</h2>
                     <div class="btn-wrap">
-                        <a href="shop.html" class="d-flex align-items-center">View all products <i class="icon icon icon-arrow-io"></i></a>
+                        <Link href="/Shop" onClick={handleClick} class="d-flex align-items-center">View all products <i class="icon icon icon-arrow-io"></i></Link>
                     </div>
                 </div>
                 <div class="swiper product-swiper overflow-hidden">
@@ -32,7 +39,7 @@ function Featured() {
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Plastic Basket Organiser</a>
+                                        <Link href="/Shop" onClick={handleClick}>Plastic Basket Organiser</Link>
                                     </h3>
                                     <span class="item-price text-primary">Rs40.00</span>
                                 </div>
@@ -59,7 +66,7 @@ function Featured() {
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Rejisters Notes - Lined</a>
+                                        <Link href="/Shop"onClick={handleClick}>Registers Notes - Lined</Link>
                                     </h3>
                                     <span class="item-price text-primary">$38.00</span>
                                 </div>
@@ -86,7 +93,7 @@ function Featured() {
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Plastic Bottles</a>
+                                        <Link href="/Shop" onClick={handleClick}>Plastic Bottles</Link>
                                     </h3>
                                     <span class="item-price text-primary">Rs20.00</span>
                                 </div>
@@ -113,7 +120,7 @@ function Featured() {
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Phone Holder</a>
+                                        <Link href="/Shop" onClick={handleClick}>Phone Holder</Link>
                                     </h3>
                                     <span class="item-price text-primary">Rs50.00</span>
                                 </div>

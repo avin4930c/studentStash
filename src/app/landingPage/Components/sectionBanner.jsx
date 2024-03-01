@@ -1,4 +1,10 @@
+import Link from "next/link";
+
 function SectionBanner() {
+  function handleClick() {
+    const router = useRouter();
+    router.refresh();
+}
     return (
         <>
         <section class="shoppify-section-banner">
@@ -13,8 +19,8 @@ function SectionBanner() {
               <h3 class="item-title">People Leave but their things don't.</h3>
               <p>Take their products and enjoy a good Quality Product at low price</p>
               <div class="btn-wrap">
-                <a href="shop.html" class="d-flex align-items-center">shop collection <i class="icon icon-arrow-io"></i>
-                </a>
+                <Link href="/Shop" onClick={handleClick} class="d-flex align-items-center">shop collection <i class="icon icon-arrow-io"></i>
+                </Link>
               </div>
             </div>
           </div>
