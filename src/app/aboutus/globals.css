@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html ,body {
+  height : 100%;
+  width: 100%;
+}
+.about_img{
+  background-image: url("/images/single-image1.jpg");
+  height: 100%;
+  width: 50vw;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  .footer{
+    display: flex;
+    text-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .shop_button{
+    font-size: 20px;
+    width: 30vw;
+  }
+}
+@media screen and (max-width:825px) {
+  .about_us{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: fit-content;
+    .about_img{
+      width: 80vw;
+    }
+    #content{
+      display: flex;
+      flex-direction: column;
+      height: fit-content;
+    }
+  }
+  .whyus{
+    display: flex;
+    flex-direction: column;
+  }
+  .footer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .shop_button{
+    width: 40vw;
+  }
+}
+@media screen and (max-width:670px) {
+  .Comments{
+    margin-top: 4vh;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    gap: 10px;
+  }
+  .rightquotes{
+    margin-right: 50vw;
+  }
+  .shop_button{
+    font-size: 20px;
+    width: 50vw;
+  }
+}
+@media screen and (max-width:500px) {
+  .rightquotes{
+    margin-left: 40px;
+  }
+  .content{
+    width: 100vw;
+    padding-right: 0px;
+  }
+  .shop_button{
+    font-size: 20px;
+    width: 60vw;
+  }
+}
